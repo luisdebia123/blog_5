@@ -1,0 +1,30 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    {{post.titulo}}
+{% endblock titulo %}
+
+
+{% block imagen %}
+    {{post.imagen}}
+{% endblock imagen %}
+
+
+
+{% block titulo_principal %}
+    <h1>{{  post.titulo }}</h1>server
+    <p>{{ post.descripcion }}</p>
+    <p>Escrito por : {{ post.autor }}</p>
+
+{% endblock titulo_principal %}
+
+
+{% block barra_busqueda %}
+{% endblock barra_busqueda %}
+
+
+
+{% block contenido %}
+    {{ post.contenido | safe}}
+{% endblock contenido %}
